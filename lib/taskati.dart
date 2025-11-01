@@ -1,7 +1,6 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:taskati/feature/splash/splash_screen.dart';
+import 'package:taskati/core/routes/app_route.dart';
+import 'package:taskati/core/routes/routes.dart';
 
 class Taskati extends StatelessWidget {
   const Taskati({super.key});
@@ -10,7 +9,8 @@ class Taskati extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      onGenerateRoute: AppRoute.Function,
+      initialRoute: Routes.splashScreen,
     );
   }
 }

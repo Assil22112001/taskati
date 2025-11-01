@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:taskati/core/routes/routes.dart';
 import 'package:taskati/core/theme/app_text_style.dart';
-import 'package:taskati/feature/auth/presentation/auth_screen.dart';
 import 'package:taskati/gen/assets.gen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,9 +20,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   navigateToNextScreen() {
     Future.delayed(Duration(seconds: 5), () {
-      Navigator.pushAndRemoveUntil(
+      Navigator.pushNamedAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (context) => AuthScreen()),
+        Routes.authScreen,
         (e) => false,
       );
     });
