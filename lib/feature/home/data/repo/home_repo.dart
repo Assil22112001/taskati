@@ -2,14 +2,10 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:taskati/core/helper/app_String.dart';
 import 'package:taskati/feature/auth/data/models/user_model.dart';
 
- class AuthRepo  {
+class HomeRepo {
  static var box = Hive.box<UserModel>(AppString.userBox);
-    saveUserData(UserModel user) async{
-    try {
-     await box.put(AppString.userKey, user);
-      return true;
-    } catch (e) {
-      return false;
-    }
+
+ static UserModel? getUserData() {
+    return box.get(AppString.userKey) as UserModel;
   }
 }

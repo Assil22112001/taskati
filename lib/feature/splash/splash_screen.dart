@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:taskati/core/routes/routes.dart';
 import 'package:taskati/core/theme/app_text_style.dart';
+import 'package:taskati/feature/home/data/repo/home_repo.dart';
 import 'package:taskati/gen/assets.gen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
   navigateToNextScreen() {
     Future.delayed(Duration(seconds: 5), () {
       Navigator.pushNamedAndRemoveUntil(
-        context,
+        context,HomeRepo.getUserData()!=null?Routes.homeScreen:
         Routes.authScreen,
         (e) => false,
       );
