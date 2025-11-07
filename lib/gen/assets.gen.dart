@@ -12,6 +12,9 @@ import 'package:flutter/widgets.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/empty_task.json
+  String get emptyTask => 'assets/images/empty_task.json';
+
   /// File path: assets/images/no_profile_pic.png
   AssetGenImage get noProfilePic =>
       const AssetGenImage('assets/images/no_profile_pic.png');
@@ -24,7 +27,8 @@ class $AssetsImagesGen {
   String get splashLogo => 'assets/images/splash_logo.json';
 
   /// List of all assets
-  List<dynamic> get values => [noProfilePic, noProfilePicture, splashLogo];
+  List<dynamic> get values =>
+      [emptyTask, noProfilePic, noProfilePicture, splashLogo];
 }
 
 class Assets {
